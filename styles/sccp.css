@@ -1,0 +1,140 @@
+/* Sephral’s Crucible Combat Pulse */
+
+/* ---------------------------------------- */
+/* Pulse strip in the tracker header        */
+/* ---------------------------------------- */
+
+.combat-tracker-header .sccp-pulse {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 100%;
+  margin-top: 4px;
+  font-size: var(--font-size-12, 12px);
+  line-height: 18px;
+}
+
+.sccp-pulse .sccp-chip {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 1px 6px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 4px;
+  background: rgb(0 0 0 / 0.35);
+  color: var(--color-text-emphatic, #efe6d8);
+  white-space: nowrap;
+  cursor: help;
+}
+
+.sccp-pulse .sccp-chip i {
+  font-size: 10px;
+}
+
+.sccp-pulse .sccp-muted {
+  opacity: 0.65;
+}
+
+.sccp-pulse .sccp-heroism i {
+  color: #ff3d7f;
+}
+
+.sccp-pulse .sccp-escalation i {
+  color: #c98a3c;
+}
+
+.sccp-pulse .sccp-escalation.active {
+  border-color: rgb(232 120 40 / 0.6);
+  background: rgb(120 40 10 / 0.45);
+}
+
+.sccp-pulse .sccp-escalation.active i {
+  color: #ff8a3d;
+}
+
+/* Heroism gained: the system meter and the chip flash */
+.heroism-meter.sccp-flash,
+.sccp-pulse .sccp-heroism.sccp-flash {
+  animation: sccp-flash 0.6s ease-in-out 3;
+}
+
+@keyframes sccp-flash {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(255 0 89 / 0); }
+  50% { box-shadow: 0 0 10px 3px rgb(255 0 89 / 0.85); }
+}
+
+/* ---------------------------------------- */
+/* Badges in the combatant rows             */
+/* ---------------------------------------- */
+
+.combat-tracker .combatant .sccp-turn {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  margin: 0 4px;
+}
+
+.sccp-turn .sccp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 4px;
+  border-radius: 3px;
+  background: rgb(0 0 0 / 0.4);
+  font-size: var(--font-size-11, 11px);
+  line-height: 15px;
+  white-space: nowrap;
+  cursor: help;
+}
+
+.sccp-turn .sccp-badge i {
+  font-size: 9px;
+}
+
+.sccp-turn .sccp-boons {
+  color: #7fd67f;
+}
+
+.sccp-turn .sccp-banes {
+  color: #ff7a6b;
+}
+
+.sccp-turn .sccp-boons + .sccp-banes {
+  margin-left: 3px;
+}
+
+.sccp-turn .sccp-even,
+.sccp-turn .sccp-fixed {
+  opacity: 0.7;
+}
+
+.sccp-turn .sccp-escalation-badge.gain {
+  color: #ffb36b;
+}
+
+.sccp-turn .sccp-escalation-badge.loss {
+  color: #ff7a6b;
+}
+
+/* Light interface theme */
+.theme-light .sccp-pulse .sccp-chip,
+.theme-light .sccp-turn .sccp-badge {
+  border-color: rgb(0 0 0 / 0.15);
+  background: rgb(255 255 255 / 0.6);
+  color: var(--color-text-primary, #222);
+}
+
+.theme-light .sccp-turn .sccp-boons {
+  color: #1f7a1f;
+}
+
+.theme-light .sccp-turn .sccp-banes,
+.theme-light .sccp-turn .sccp-escalation-badge.loss {
+  color: #a3261a;
+}

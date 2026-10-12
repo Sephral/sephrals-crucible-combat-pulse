@@ -1,0 +1,16 @@
+{
+  "name": "sephrals-crucible-combat-pulse",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check scripts/config.mjs && node --check scripts/escalation.mjs && node --check scripts/heroism.mjs && node --check scripts/language.mjs && node --check scripts/rules.mjs && node --check scripts/sccp.mjs && node --check scripts/selftest.mjs && node --check scripts/settings.mjs && node --check scripts/tracker.mjs",
+    "check:manifest": "node build/validate-manifest.mjs",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "release:prepare": "node build/prepare-release.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

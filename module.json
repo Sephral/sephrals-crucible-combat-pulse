@@ -1,0 +1,46 @@
+{
+  "id": "sephrals-crucible-combat-pulse",
+  "title": "Sephral’s Crucible Combat Pulse",
+  "description": "Makes the hidden pulse of a Crucible fight visible in the combat tracker: exact progress to the next Heroism point, the Morale escalation from round 7 and a forecast of every combatant's next initiative roll.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 14,
+    "verified": "14.369"
+  },
+  "authors": [
+    {
+      "name": "Sephral"
+    }
+  ],
+  "url": "https://github.com/Sephral/sephrals-crucible-combat-pulse.git",
+  "relationships": {
+    "systems": [
+      {
+        "id": "crucible",
+        "type": "system",
+        "compatibility": {
+          "minimum": "0.11.0",
+          "verified": "0.11.1"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/sccp.mjs"
+  ],
+  "styles": [
+    "styles/sccp.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ]
+}

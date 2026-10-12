@@ -1,0 +1,100 @@
+{
+  "SCCP": {
+    "LANGUAGE": {
+      "default": "Wie Foundry",
+      "de": "Deutsch",
+      "en": "English"
+    },
+    "Heroism": {
+      "Title": "Heldentum",
+      "Progress": "{progress} / {required} AP",
+      "Remaining": "noch {remaining}",
+      "Rule": "Jede bestätigte Aktion, die einer anderen Kreatur schadet, sie heilt oder einen Effekt auf sie legt, zählt mit ihren AP-Kosten. Alle {required} AP ({heroes} Helden × 12) erhält jeder Kämpfer mit Heldentum-Maximum 1 Heldentum.",
+      "Total": "Bisher in diesem Kampf: {actions} AP, {earned} Heldentum.",
+      "Gained": "Heldentum! Jeder Kämpfer mit Heldentum-Maximum erhält 1 Heldentum."
+    },
+    "Escalation": {
+      "Title": "Eskalation",
+      "Rule": "Ab Runde 7 gewinnt zu Beginn jeder Runde der Erste in der Zugreihenfolge so viel Moral, wie die Runde zählt. Der Letzte, der nicht handlungsunfähig ist, verliert genauso viel.",
+      "Upcoming": "Eskalation ab Runde {round}",
+      "RoundsLeft": "noch {rounds}",
+      "Active": "Eskalation ±{amount} Moral",
+      "Next": "nächste ±{amount}",
+      "First": "Diese Runde hat {name} {amount} Moral gewonnen.",
+      "Last": "Diese Runde hat {name} {amount} Moral verloren.",
+      "BadgeGain": "Eskalation: {amount} Moral gewonnen zu Beginn dieser Runde.",
+      "BadgeLoss": "Eskalation: {amount} Moral verloren zu Beginn dieser Runde."
+    },
+    "Forecast": {
+      "Title": "Nächste Initiative",
+      "Hint": "Crucible würfelt die Initiative zu Beginn jeder Runde neu. So sähe der Wurf aus, wenn die Runde jetzt endet.",
+      "Roll": "Wurf: {pool}, im Schnitt {average}",
+      "Boons": "Boons",
+      "Banes": "Banes",
+      "Capped": "Zählt nicht mehr (höchstens {max}): {sources}",
+      "Fixed": {
+        "incapacitated": "Handlungsunfähig: Initiative {value}.",
+        "unaware": "Ahnungslos: Initiative {value}."
+      },
+      "Sources": {
+        "action": "Ungenutzte AP",
+        "slow": "Langsame Waffen",
+        "broken": "Beschädigt",
+        "bulky": "Sperrige Rüstung",
+        "rank": "Rang {label}"
+      }
+    },
+    "SETTINGS": {
+      "uiLanguage": {
+        "name": "Modulsprache",
+        "hint": "Sprache von Combat Pulse für dich. „Wie Foundry“ nimmt die Sprache von Foundry."
+      },
+      "heroismDetail": {
+        "name": "Heldentum-Fortschritt zeigen",
+        "hint": "Zeigt unter Crucibles Leiste im Combat Tracker, wie viele AP auf der Heldentum-Leiste stehen und wie viele bis zum nächsten Punkt fehlen."
+      },
+      "heroismAlert": {
+        "name": "Heldentum-Hinweis",
+        "hint": "Was passiert, wenn die Leiste voll ist und alle Kämpfer Heldentum erhalten.",
+        "notify": "Aufleuchten und Benachrichtigung",
+        "flash": "Nur die Leiste leuchtet auf",
+        "off": "Nichts"
+      },
+      "escalation": {
+        "name": "Eskalation zeigen",
+        "hint": "Zeigt, wann die Eskalation der Moral beginnt, und ab Runde 7, wer in dieser Runde Moral gewonnen und wer sie verloren hat."
+      },
+      "forecast": {
+        "name": "Initiative-Vorschau zeigen",
+        "hint": "Zeigt im Combat Tracker die Boons und Banes des nächsten Initiativewurfs jedes Kämpfers. Mit der Maus darüber siehst du Würfel und Quellen."
+      },
+      "forecastVisibility": {
+        "name": "Wer sieht die Vorschau",
+        "hint": "Die Vorschau verrät ungenutzte AP. Die Spielleitung sieht immer alles.",
+        "gm": "Nur die Spielleitung",
+        "owner": "Besitzer des Charakters",
+        "heroes": "Alle bei Helden, die Spielleitung bei Gegnern",
+        "all": "Alle bei jedem Kämpfer"
+      }
+    },
+    "SELFTEST": {
+      "Title": "Combat Pulse Selbsttest",
+      "Run": "Selbsttest starten",
+      "Hint": "Prüft die Teile von Crucible, auf die Combat Pulse angewiesen ist. Nach jedem Update von Crucible oder Foundry ausführen, am besten mit laufendem Kampf.",
+      "Passed": "Selbsttest bestanden: {checks} Prüfungen.",
+      "Problems": "Selbsttest: {problems} von {checks} Prüfungen fehlgeschlagen. Details im Chat.",
+      "Version": "{id} {current} (geprüft {tested})",
+      "NoCombat": "Starte einen Kampf, damit auch die Heldentum-Leiste und die Initiative-Vorschau geprüft werden.",
+      "NewVersions": "Combat Pulse wurde mit älteren Versionen als {versions} geprüft. Der Selbsttest in den Moduleinstellungen zeigt, ob noch alles funktioniert.",
+      "NotCrucible": "Diese Welt nutzt nicht das System Crucible.",
+      "HeroismModel": "Das Datenmodell des Kampfes hat keine Heldentum-Leiste (system.heroism.actions und awarded).",
+      "EscalationHook": "Das Datenmodell des Kampfes hat keinen Rundenstart, die Eskalation arbeitet vielleicht anders.",
+      "InitiativeRoll": "Kämpfer können keinen Initiativewurf bauen (getInitiativeRoll).",
+      "Dice": "Die Würfelgrenzen von Crucible haben sich geändert (Boons, Banes oder Würfelgrößen).",
+      "HeroismRate": "Die Heldentum-Leiste braucht {derived} AP pro Punkt, Combat Pulse erwartet {expected}.",
+      "HeroismState": "Die Heldentum-Leiste des laufenden Kampfes ließ sich nicht lesen.",
+      "Forecast": "Die Initiative-Vorschau für {name} ließ sich nicht bauen.",
+      "Meter": "Crucibles Heldentum-Leiste fehlt im Combat Tracker."
+    }
+  }
+}

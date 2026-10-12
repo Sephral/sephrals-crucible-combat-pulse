@@ -1,0 +1,100 @@
+{
+  "SCCP": {
+    "LANGUAGE": {
+      "default": "Follow Foundry",
+      "de": "Deutsch",
+      "en": "English"
+    },
+    "Heroism": {
+      "Title": "Heroism",
+      "Progress": "{progress} / {required} AP",
+      "Remaining": "{remaining} to go",
+      "Rule": "Every confirmed action that damages, heals or affects another creature adds its AP cost. Every {required} AP ({heroes} heroes × 12) every combatant with a Heroism maximum gains 1 Heroism.",
+      "Total": "This fight so far: {actions} AP, {earned} Heroism.",
+      "Gained": "Heroism! Every combatant with a Heroism maximum gains 1 Heroism."
+    },
+    "Escalation": {
+      "Title": "Escalation",
+      "Rule": "From round 7 on, at the start of each round the first combatant in the turn order gains Morale equal to the round number, and the last one who is not incapacitated loses the same amount.",
+      "Upcoming": "Escalation from round {round}",
+      "RoundsLeft": "{rounds} to go",
+      "Active": "Escalation ±{amount} Morale",
+      "Next": "next ±{amount}",
+      "First": "This round {name} gained {amount} Morale.",
+      "Last": "This round {name} lost {amount} Morale.",
+      "BadgeGain": "Escalation: gained {amount} Morale at the start of this round.",
+      "BadgeLoss": "Escalation: lost {amount} Morale at the start of this round."
+    },
+    "Forecast": {
+      "Title": "Next initiative",
+      "Hint": "Crucible rolls initiative again at the start of every round. This is the roll if the round ended now.",
+      "Roll": "Roll: {pool}, average {average}",
+      "Boons": "Boons",
+      "Banes": "Banes",
+      "Capped": "Not counted (at most {max}): {sources}",
+      "Fixed": {
+        "incapacitated": "Incapacitated: initiative {value}.",
+        "unaware": "Unaware: initiative {value}."
+      },
+      "Sources": {
+        "action": "Unspent AP",
+        "slow": "Slow weapons",
+        "broken": "Broken",
+        "bulky": "Bulky armor",
+        "rank": "{label} rank"
+      }
+    },
+    "SETTINGS": {
+      "uiLanguage": {
+        "name": "Module language",
+        "hint": "Language of Combat Pulse for you. Follow Foundry uses Foundry's language."
+      },
+      "heroismDetail": {
+        "name": "Show Heroism progress",
+        "hint": "Shows the AP on the Heroism meter and how many are still missing to the next point, under Crucible's meter in the combat tracker."
+      },
+      "heroismAlert": {
+        "name": "Heroism alert",
+        "hint": "What happens when the meter is full and every combatant gains Heroism.",
+        "notify": "Flash and notification",
+        "flash": "Only flash the meter",
+        "off": "Nothing"
+      },
+      "escalation": {
+        "name": "Show escalation",
+        "hint": "Shows when the Morale escalation starts and, from round 7 on, who gained and who lost Morale this round."
+      },
+      "forecast": {
+        "name": "Show initiative forecast",
+        "hint": "Shows the boons and banes of every combatant's next initiative roll in the combat tracker. Hover for the dice and the sources."
+      },
+      "forecastVisibility": {
+        "name": "Who sees the forecast",
+        "hint": "The forecast shows unspent AP. The GM always sees all of it.",
+        "gm": "Only the GM",
+        "owner": "Owners of the character",
+        "heroes": "Everyone for heroes, the GM for adversaries",
+        "all": "Everyone for every combatant"
+      }
+    },
+    "SELFTEST": {
+      "Title": "Combat Pulse self test",
+      "Run": "Run self test",
+      "Hint": "Checks the parts of Crucible that Combat Pulse relies on. Run it after a Crucible or Foundry update, best with a combat running.",
+      "Passed": "Self test passed: {checks} checks.",
+      "Problems": "Self test: {problems} of {checks} checks failed. See the chat message.",
+      "Version": "{id} {current} (verified {tested})",
+      "NoCombat": "Start a combat to also check the Heroism meter and the initiative forecast.",
+      "NewVersions": "Combat Pulse was verified with older versions than {versions}. Run the self test in the module settings to check that everything still works.",
+      "NotCrucible": "This world does not run the Crucible system.",
+      "HeroismModel": "The combat data model has no Heroism meter (system.heroism.actions and awarded).",
+      "EscalationHook": "The combat data model has no round start handler, so the escalation may work differently.",
+      "InitiativeRoll": "Combatants cannot build an initiative roll (getInitiativeRoll).",
+      "Dice": "The dice limits of Crucible changed (boons, banes or die sizes).",
+      "HeroismRate": "The Heroism meter needs {derived} AP per point, Combat Pulse expects {expected}.",
+      "HeroismState": "The Heroism meter of the current combat could not be read.",
+      "Forecast": "The initiative forecast of {name} could not be built.",
+      "Meter": "Crucible's Heroism meter is missing in the combat tracker."
+    }
+  }
+}
