@@ -2,6 +2,7 @@
 
 **Crucible fights have a pulse nobody at the table can see. Combat Pulse puts it into the combat tracker.** How close is the next Heroism point? When does the Morale escalation hit? Who acts first next round? Your players can plan around it, and you no longer have to count.
 
+[![Foundry VTT package](https://img.shields.io/badge/Foundry%20VTT-Package%20page-fe6a1f?logo=foundryvirtualtabletop&logoColor=white)](https://foundryvtt.com/packages/sephrals-crucible-combat-pulse)
 [![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/7BjCgDYaBP)
 [![More modules by Sephral](https://img.shields.io/badge/GitHub-More%20modules%20by%20Sephral-181717?logo=github&logoColor=white)](https://github.com/Sephral)
 
@@ -24,8 +25,7 @@ Enable the module in your Crucible world and start a fight. Everything appears i
 
 ## Install
 
-Use the manifest URL
-`https://github.com/Sephral/sephrals-crucible-combat-pulse/releases/latest/download/module.json`
+Search for **Crucible Combat Pulse** in Foundry's module browser or open the [package page](https://foundryvtt.com/packages/sephrals-crucible-combat-pulse).
 
 Foundry VTT 14 · Crucible 0.11 · English and German
 
