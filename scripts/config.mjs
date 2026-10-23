@@ -6,7 +6,7 @@
 export const MODULE_ID = "sephrals-crucible-combat-pulse";
 
 /** The versions of Crucible and Foundry the module was verified against (see the self-test). */
-export const TESTED_VERSIONS = {crucible: "0.11.1", core: "14.369"};
+export const TESTED_VERSIONS = {crucible: "0.11.2", core: "14.369"};
 
 /**
  * Is this a Crucible world? Every hook of the module returns early when it is not.
