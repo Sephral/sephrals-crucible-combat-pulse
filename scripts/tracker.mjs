@@ -8,6 +8,7 @@ import {MODULE_ID, isCrucible, openSettings, setting} from "./config.mjs";
 import {
   DICE, averageRoll, canSeeForecast, countSources, dicePool, escalationState, heroismState, poolLabel, signed
 } from "./rules.mjs";
+import {countFeature} from "./usage.mjs";
 
 /** Ids of boon and bane sources the system adds to initiative rolls, localized by the module. */
 const KNOWN_SOURCES = ["action", "slow", "broken", "bulky", "rank"];
@@ -250,6 +251,7 @@ function renderHeader(root, combat) {
   gear.addEventListener("click", event => {
     event.preventDefault();
     event.stopPropagation();
+    countFeature(MODULE_ID, "settingsGear");
     openSettings();
   });
   strip.append(gear);

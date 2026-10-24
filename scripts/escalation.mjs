@@ -7,6 +7,7 @@
 
 import {MODULE_ID, isCrucible} from "./config.mjs";
 import {escalationState, escalationTargets} from "./rules.mjs";
+import {countFeature} from "./usage.mjs";
 
 /**
  * Hook "updateCombat": record the escalation of a new round.
@@ -23,6 +24,7 @@ export function onUpdateCombat(combat, changes) {
   const record = {round: combat.round, first: targets.first?.id ?? null, last: targets.last?.id ?? null};
   const current = combat.getFlag(MODULE_ID, "escalation");
   if ( foundry.utils.equals(current ?? {}, record) ) return;
+  countFeature(MODULE_ID, "escalationRecorded");
   combat.setFlag(MODULE_ID, "escalation", record).catch(err => {
     console.warn(`${MODULE_ID} | Could not record the escalation of round ${record.round}`, err);
   });

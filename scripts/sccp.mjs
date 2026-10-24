@@ -8,10 +8,15 @@ import {registerSettings} from "./settings.mjs";
 import {
   escalationOf, forecast, heroismOf, onRenderCombatTracker, refreshTrackers, scheduleTurnRefresh
 } from "./tracker.mjs";
+import {registerUsage} from "./usage.mjs";
 
 Hooks.once("init", () => {
   if ( !isCrucible() ) return;
   registerSettings();
+  registerUsage(MODULE_ID, {
+    features: ["heroismPoint", "escalationRecorded", "settingsGear"],
+    settings: ["forecastVisibility", "heroismAlert", "forecast"]
+  });
 
   Hooks.on("renderCombatTracker", onRenderCombatTracker);
   Hooks.on("updateCombat", recordEscalation);

@@ -3,8 +3,9 @@
  * maximum one point, quietly. Every client watches the meter and lets it flash, optionally with a notification.
  */
 
-import {isCrucible, setting} from "./config.mjs";
+import {MODULE_ID, isCrucible, setting} from "./config.mjs";
 import {flashHeroism, heroismOf, isPulseCombat} from "./tracker.mjs";
+import {countFeature} from "./usage.mjs";
 
 /** The number of Heroism points each combat has generated so far, by combat id. */
 const earned = new Map();
@@ -39,6 +40,7 @@ export function onUpdateCombat(combat, changes) {
   if ( !heroism || !("awarded" in heroism) || (previous === undefined) ) return;
   const now = earned.get(combat.id);
   if ( now <= previous ) return;
+  countFeature(MODULE_ID, "heroismPoint");
   const mode = setting("heroismAlert");
   if ( mode === "off" ) return;
   flashHeroism();
