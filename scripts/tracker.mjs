@@ -4,7 +4,7 @@
  * Everything is added to the rendered tracker, so a refresh never re-renders Foundry's application.
  */
 
-import {MODULE_ID, isCrucible, setting} from "./config.mjs";
+import {MODULE_ID, isCrucible, openSettings, setting} from "./config.mjs";
 import {
   DICE, averageRoll, canSeeForecast, countSources, dicePool, escalationState, heroismState, poolLabel, signed
 } from "./rules.mjs";
@@ -240,6 +240,19 @@ function renderHeader(root, combat) {
   const strip = document.createElement("div");
   strip.className = "sccp-pulse";
   strip.innerHTML = html;
+  // Every user has settings of their own here, so everyone gets the gear
+  const gear = document.createElement("button");
+  gear.type = "button";
+  gear.className = "sccp-settings";
+  gear.dataset.tooltip = _loc("SCCP.SETTINGS.open");
+  gear.setAttribute("aria-label", _loc("SCCP.SETTINGS.open"));
+  gear.innerHTML = '<i class="fa-solid fa-gear" inert></i>';
+  gear.addEventListener("click", event => {
+    event.preventDefault();
+    event.stopPropagation();
+    openSettings();
+  });
+  strip.append(gear);
   // Right under Crucible's Heroism meter, which the system adds to the header on every render
   const meter = header.querySelector(".heroism-meter");
   if ( meter ) meter.after(strip);

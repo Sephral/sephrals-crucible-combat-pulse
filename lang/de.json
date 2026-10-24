@@ -75,7 +75,8 @@
         "owner": "Besitzer des Charakters",
         "heroes": "Alle bei Helden, die Spielleitung bei Gegnern",
         "all": "Alle bei jedem Kämpfer"
-      }
+      },
+      "open": "Einstellungen"
     },
     "SELFTEST": {
       "Title": "Combat Pulse Selbsttest",

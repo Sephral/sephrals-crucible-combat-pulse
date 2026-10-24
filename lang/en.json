@@ -75,7 +75,8 @@
         "owner": "Owners of the character",
         "heroes": "Everyone for heroes, the GM for adversaries",
         "all": "Everyone for every combatant"
-      }
+      },
+      "open": "Settings"
     },
     "SELFTEST": {
       "Title": "Combat Pulse self test",

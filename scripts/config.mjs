@@ -24,3 +24,17 @@ export function isCrucible() {
 export function setting(key) {
   return game.settings.get(MODULE_ID, key);
 }
+
+/**
+ * Open Foundry's settings on the tab of this module.
+ */
+export async function openSettings() {
+  const sheet = game.settings.sheet;
+  await sheet.render({force: true});
+  try {
+    sheet.changeTab(MODULE_ID, "categories");
+  } catch(err) {
+    console.warn(`${MODULE_ID} | The settings have no tab for this module`, err);
+  }
+  sheet.bringToFront?.();
+}

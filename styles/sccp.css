@@ -46,6 +46,27 @@
   color: #c98a3c;
 }
 
+.sccp-pulse .sccp-settings {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 11px;
+  line-height: 20px;
+  color: var(--color-text-emphatic, #efe6d8);
+  opacity: 0.6;
+}
+
+.sccp-pulse .sccp-settings:hover,
+.sccp-pulse .sccp-settings:focus-visible {
+  opacity: 1;
+  box-shadow: none;
+}
+
 .sccp-pulse .sccp-escalation.active {
   border-color: rgb(232 120 40 / 0.6);
   background: rgb(120 40 10 / 0.45);

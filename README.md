@@ -21,7 +21,9 @@
 
 ## How it works
 
-Enable the module in your Crucible world and start a fight. Everything appears in the combat tracker, in the sidebar and in the popout. Every user can switch each part on or off for themselves in the module settings.
+1. Enable the module in your Crucible world.
+2. Start a fight. Heroism, escalation and the forecast appear in the combat tracker, in the sidebar and in the popout.
+3. Click the gear next to the Heroism numbers to choose what you see. Every user decides for themselves.
 
 ## Install
 
@@ -33,7 +35,7 @@ Crucible is still in development. After an update of Crucible or Foundry the GM 
 
 ## Learn more
 
-Questions or ideas? Join us on [Discord](https://discord.gg/7BjCgDYaBP). Looking for more? See [all modules by Sephral](https://github.com/Sephral).
+Every setting, the self test and the macro API are in the [manual](MANUAL.md). Questions or ideas? Join us on [Discord](https://discord.gg/7BjCgDYaBP). Looking for more? See [all modules by Sephral](https://github.com/Sephral).
 
 ## License
 
