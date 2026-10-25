@@ -28,6 +28,19 @@ All options are in *Game Settings → Configure Settings → Sephral’s Crucibl
 | Who sees the forecast | Only the GM, owners of the character, everyone for heroes and the GM for adversaries, or everyone. The forecast shows unspent AP, so the GM decides (GM) |
 | Self test | Checks the parts of Crucible the module relies on (GM) |
 
+## Usage statistics
+
+The module can take part in a small usage report shared by all of Sephral’s modules. Nothing is counted or sent until the GM agrees: shortly after the world starts, the active GM is asked, and the question comes back at every start until there is an answer. The answer counts for all of Sephral’s modules in the world. *Share usage statistics* in the module settings turns the report on or off at any time, and *Manage statistics* below it shows what the report contains right now.
+
+With the GM’s consent only the active GM’s browser counts, and it sends at most one report a day. The question lists everything the report contains, from the Foundry version to a random world ID. For Combat Pulse it holds:
+
+* on how many of the last 30 days the module was used
+* how often a Heroism point is earned in a tracked combat, the Morale escalation is recorded and the settings gear in the tracker is used
+* the settings *Who sees the forecast*, *Heroism alert* and *Show initiative forecast* (only the chosen option)
+* where errors occur in the module code: file, line and error type, never the error message
+
+No names, chat messages, notes, dice results or other content of the world are sent.
+
 ## Self test
 
 Crucible is still in development and changes its internals between versions. After an update of Crucible or Foundry the GM gets a short notice. The self test in the settings checks the Heroism meter, the escalation, the initiative roll and the dice limits of Crucible and posts the result as a chat message only the GM sees. Run it with a combat running, then it also checks the current fight.
