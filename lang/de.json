@@ -79,7 +79,7 @@
       "open": "Einstellungen"
     },
     "SELFTEST": {
-      "Title": "Combat Pulse Selbsttest",
+      "Title": "Selbsttest von Combat Pulse",
       "Run": "Selbsttest starten",
       "Hint": "Prüft die Teile von Crucible, auf die Combat Pulse angewiesen ist. Nach jedem Update von Crucible oder Foundry ausführen, am besten mit laufendem Kampf.",
       "Passed": "Selbsttest bestanden: {checks} Prüfungen.",
