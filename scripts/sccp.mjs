@@ -1,4 +1,6 @@
 import {MODULE_ID, isCrucible} from "./config.mjs";
+import {registerDebug} from "./debug.mjs";
+import {saveDebugFile} from "./debug-file.mjs";
 import {onUpdateCombat as recordEscalation} from "./escalation.mjs";
 import {onDeleteCombat, onUpdateCombat as watchHeroism, trackAllCombats, trackHeroism} from "./heroism.mjs";
 import {applyModuleLanguage} from "./language.mjs";
@@ -13,6 +15,7 @@ import {registerUsage} from "./usage.mjs";
 Hooks.once("init", () => {
   if ( !isCrucible() ) return;
   registerSettings();
+  registerDebug();
   registerUsage(MODULE_ID, {
     features: ["heroismPoint", "escalationRecorded", "settingsGear"],
     settings: ["forecastVisibility", "heroismAlert", "forecast"]
@@ -48,7 +51,9 @@ Hooks.once("init", () => {
     /** Redraw the module's parts of the combat tracker. */
     refresh: refreshTrackers,
     /** Check the Crucible integration (GM). */
-    runSelfTest
+    runSelfTest,
+    /** Save the debug file of Sephral's modules (GM): about one chat message, or without an id the latest picture. */
+    saveDebugFile: messageId => saveDebugFile(messageId ?? null, {moduleId: MODULE_ID})
   };
 });
 

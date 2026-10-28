@@ -96,6 +96,13 @@
       "HeroismState": "The Heroism meter of the current combat could not be read.",
       "Forecast": "The initiative forecast of {name} could not be built.",
       "Meter": "Crucible's Heroism meter is missing in the combat tracker."
+    },
+    "DEBUG": {
+      "Title": "Debug file",
+      "Save": "Save debug file",
+      "Hint": "Saves one file for bug reports about all of Sephral’s modules in this world: versions, settings and what the modules recorded, such as the latest chat messages they read. It contains chat text and whispers, check it before you share it.",
+      "Entry": "Save Debug File (Sephral’s Modules)",
+      "Saved": "Debug file {file} saved. It contains chat text and whispers, check it before you share it."
     }
   }
 }

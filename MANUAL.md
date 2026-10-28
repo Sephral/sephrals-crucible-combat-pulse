@@ -27,6 +27,7 @@ All options are in *Game Settings → Configure Settings → Sephral’s Crucibl
 | Show initiative forecast | The forecast badges (for you) |
 | Who sees the forecast | Only the GM, owners of the character, everyone for heroes and the GM for adversaries, or everyone. The forecast shows unspent AP, so the GM decides (GM) |
 | Self test | Checks the parts of Crucible the module relies on (GM) |
+| Debug file | Saves a file for bug reports, see [Debug file](#debug-file) (GM) |
 
 ## Usage statistics
 
@@ -45,6 +46,12 @@ No names, chat messages, notes, dice results or other content of the world are s
 
 Crucible is still in development and changes its internals between versions. After an update of Crucible or Foundry the GM gets a short notice. The self test in the settings checks the Heroism meter, the escalation, the initiative roll and the dice limits of Crucible and posts the result as a chat message only the GM sees. Run it with a combat running, then it also checks the current fight.
 
+## Debug file
+
+For bug reports, the GM saves one file about all of Sephral’s modules in this world: `Save debug file` in the module settings, or `Save Debug File (Sephral’s Modules)` in the context menu of a chat message. It holds the versions of Foundry, the system and the active modules, the settings of the modules and what they recorded, for Combat Pulse the verified and installed versions and the current combat with its round, Heroism meter, escalation and the initiative forecast of every combatant. Macros call `game.modules.get("sephrals-crucible-combat-pulse").api.saveDebugFile()`.
+
+The file contains chat text and whispers. Check it before you share it.
+
 ## API
 
 `game.modules.get("sephrals-crucible-combat-pulse").api` offers:
@@ -57,6 +64,7 @@ Crucible is still in development and changes its internals between versions. Aft
 | `rules` | The pure rule helpers for the Heroism meter and the escalation |
 | `refresh()` | Redraws the module's parts of the combat tracker |
 | `runSelfTest()` | Runs the self test (GM) |
+| `saveDebugFile()` | Saves the debug file of Sephral’s modules (GM) |
 
 ## Limits
 

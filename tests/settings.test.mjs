@@ -61,9 +61,16 @@ test("every setting is registered with its scope, default and choices", () => {
 
 test("the self test is a GM menu backed by an application class", () => {
   const {menus} = register();
-  assert.deepEqual([...menus.keys()], ["selfTest"]);
+  assert.deepEqual([...menus.keys()], ["selfTest", "debugFile"]);
   const menu = menus.get("selfTest");
   assert.equal(menu.restricted, true);
+  assert.ok(menu.type.prototype instanceof foundry.applications.api.ApplicationV2);
+});
+
+test("the debug file is a GM button of the shared debug file", () => {
+  const menu = register().menus.get("debugFile");
+  assert.equal(menu.restricted, true);
+  assert.equal(menu.label, "SCCP.DEBUG.Save");
   assert.ok(menu.type.prototype instanceof foundry.applications.api.ApplicationV2);
 });
 

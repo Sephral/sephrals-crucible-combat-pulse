@@ -5,6 +5,7 @@
  */
 
 import {MODULE_ID} from "./config.mjs";
+import {registerDebugMenu} from "./debug-file.mjs";
 import {FOLLOW_FOUNDRY, applyModuleLanguage} from "./language.mjs";
 import {runSelfTest} from "./selftest.mjs";
 import {refreshTrackers} from "./tracker.mjs";
@@ -69,7 +70,7 @@ class PulseSelfTestMenu extends foundry.applications.api.ApplicationV2 {
 /* -------------------------------------------- */
 
 /**
- * Register all settings of the module and the self-test menu button.
+ * Register all settings of the module and the menu buttons for the self-test and the debug file.
  */
 export function registerSettings() {
   for ( const [key, def] of Object.entries(SETTINGS) ) {
@@ -96,4 +97,7 @@ export function registerSettings() {
     type: PulseSelfTestMenu,
     restricted: true
   });
+
+  // The button saves the debug file of Sephral's modules instead of opening a window
+  registerDebugMenu(MODULE_ID, {name: "SCCP.DEBUG.Title", label: "SCCP.DEBUG.Save", hint: "SCCP.DEBUG.Hint"});
 }
