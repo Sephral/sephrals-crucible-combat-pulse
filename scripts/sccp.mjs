@@ -1,6 +1,7 @@
-import {MODULE_ID, isCrucible} from "./config.mjs";
+import {MODULE_ID, TESTED_VERSIONS, isCrucible} from "./config.mjs";
 import {registerDebug} from "./debug.mjs";
 import {saveDebugFile} from "./debug-file.mjs";
+import {registerHubModule} from "./hub.mjs";
 import {onUpdateCombat as recordEscalation} from "./escalation.mjs";
 import {onDeleteCombat, onUpdateCombat as watchHeroism, trackAllCombats, trackHeroism} from "./heroism.mjs";
 import {applyModuleLanguage} from "./language.mjs";
@@ -14,6 +15,7 @@ import {registerUsage} from "./usage.mjs";
 
 Hooks.once("init", () => {
   if ( !isCrucible() ) return;
+  registerHubModule({moduleId: MODULE_ID, tested: TESTED_VERSIONS});
   registerSettings();
   registerDebug();
   registerUsage(MODULE_ID, {
